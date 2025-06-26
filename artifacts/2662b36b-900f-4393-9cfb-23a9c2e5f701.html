@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Black & White - Brand Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #000000;
+            --color-action: #FFFFFF;
+            --color-text-primary: #000000;
+            --color-text-secondary: #666666;
+            --color-background: #FFFFFF;
+            --color-surface: #F5F5F5;
+            --color-border: #E0E0E0;
+            --font-family-primary: 'Roboto', sans-serif;
+            --font-size-h1: 48px;
+            --font-size-h2: 34px;
+            --font-size-h3: 28px;
+            --font-size-body: 14px;
+            --font-size-small: 12px;
+            --border-radius: 6px;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-family-primary);
+            background-color: var(--color-background);
+            color: var(--color-text-secondary);
+            -webkit-font-smoothing: antialiased;
+            font-size: var(--font-size-body);
+        }
+        .style-guide-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 5rem;
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            align-items: start;
+        }
+        .style-guide-main { display: flex; flex-direction: column; gap: 3.5rem; }
+        .style-guide-sidebar { display: flex; flex-direction: column; gap: 3rem; }
+        .section-title {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+        }
+        .brand-header h1 {
+            font-size: var(--font-size-h2);
+            color: var(--color-text-primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .brand-header p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--color-text-secondary);
+            max-width: 40ch;
+        }
+        .type-sample { margin-bottom: 2.5rem; }
+        .type-sample h1, .type-sample h2, .type-sample h3 { color: var(--color-text-primary); margin-bottom: 0.25rem; }
+        .type-sample .meta { font-size: var(--font-size-body); color: var(--color-text-secondary); }
+        .type-sample p { line-height: 1.7; max-width: 60ch; margin-bottom: 0.25rem; }
+        .color-palette { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .color-chip .swatch {
+            height: 70px;
+            border-radius: var(--border-radius);
+            margin-bottom: 0.5rem;
+        }
+        .color-chip .label { font-size: var(--font-size-body); font-weight: 600; color: var(--color-text-primary); }
+        .color-chip .hex { font-size: var(--font-size-small); color: var(--color-text-secondary); }
+        .component-group { display: flex; flex-direction: column; gap: 0.5rem; }
+        .component-group h3 { font-size: 1rem; font-weight: 700; color: var(--color-text-primary); }
+        .component-showcase {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: var(--spacing-md);
+            background-color: var(--color-background);
+            border: 1px solid var(--color-border);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin-top: 0.5rem;
+        }
+        .btn {
+            display: inline-block; padding: 10px 18px; font-size: var(--font-size-body);
+            font-weight: 600; text-decoration: none; border-radius: var(--border-radius);
+            border: 1px solid transparent; cursor: pointer; transition: all 0.2s ease;
+        }
+        .btn-primary { background-color: var(--color-primary); color: var(--color-action); border-color: var(--color-primary); }
+        .btn-secondary { background-color: transparent; color: var(--color-primary); border-color: var(--color-primary); }
+        .btn-action { background-color: var(--color-action); color: var(--color-primary); border-color: var(--color-action); }
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; width: 100%; }
+        .form-group label { font-weight: 600; font-size: var(--font-size-body); color: var(--color-text-primary); }
+        .form-input {
+            width: 100%;
+            padding: 10px 12px;
+            font-family: var(--font-family-primary);
+            font-size: var(--font-size-body);
+            border: 1px solid #CDCDCD;
+            border-radius: var(--border-radius);
+        }
+        .card {
+            background-color: var(--color-surface);
+            border: 1px solid #EADFCF;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+        }
+        .card h3 { font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .card p { line-height: 1.6; margin-bottom: 1.25rem; }
+    </style>
+</head>
+<body>
+    <div class="style-guide-wrapper">
+        <main class="style-guide-main">
+            <header class="brand-header">
+                <h1>E-Commerce Black & White</h1>
+                <p>A minimalist approach to online shopping.</p>
+            </header>
+
+            <section class="typography-section">
+                <h2 class="section-title">Typography</h2>
+                <div class="type-sample">
+                    <h1 style="font-size: var(--font-size-h1); font-weight: 700;">Headline 1</h1>
+                    <span class="meta">Font: Roboto, Weight: 700, Size: 48px</span>
+                </div>
+                <div class="type-sample">
+                    <h2 style="font-size: var(--font-size-h2); font-weight: 600;">Headline 2</h2>
+                    <span class="meta">Font: Roboto, Weight: 600, Size: 34px</span>
+                </div>
+                <div class="type-sample">
+                    <h3 style="font-size: var(--font-size-h3); font-weight: 600;">Headline 3</h3>
+                    <span class="meta">Font: Roboto, Weight: 600, Size: 28px</span>
+                </div>
+                <div class="type-sample">
+                    <p>This is the main body text. It's set in Roboto at 14px with a regular (400) weight for optimal legibility in paragraphs, descriptions, and other long-form content. The line height is adjusted for comfortable reading.</p>
+                    <span class="meta">Font: Roboto, Weight: 400, Size: 14px</span>
+                </div>
+            </section>
+        </main>
+
+        <aside class="style-guide-sidebar">
+            <section class="colors-section">
+                <h2 class="section-title">Color Palette</h2>
+                <div class="color-palette">
+                    <div class="color-chip">
+                        <div class="swatch" style="background-color: var(--color-primary);"></div>
+                        <div class="label">Primary</div>
+                        <div class="hex">#000000</div>
+                    </div>
+                    <div class="color-chip">
+                        <div class="swatch" style="background-color: var(--color-action);"></div>
+                        <div class="label">Action</div>
+                        <div class="hex">#FFFFFF</div>
+                    </div>
+                    <div class="color-chip">
+                        <div class="swatch" style="background-color: var(--color-text-primary);"></div>
+                        <div class="label">Text</div>
+                        <div class="hex">#000000</div>
+                    </div>
+                    <div class="color-chip">
+                        <div class="swatch" style="background-color: var(--color-surface);"></div>
+                        <div class="label">Surface</div>
+                        <div class="hex">#F5F5F5</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="ui-elements-section">
+                <h2 class="section-title">UI Elements</h2>
+                
+                <div class="component-group">
+                    <h3>Buttons</h3>
+                    <div class="component-showcase">
+                        <a href="#" class="btn btn-primary">Primary</a>
+                        <a href="#" class="btn btn-secondary">Secondary</a>
+                        <a href="#" class="btn btn-action">Action</a>
+                    </div>
+                </div>
+
+                <div class="component-group">
+                    <h3>Form Input</h3>
+                    <div class="component-showcase">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="e.g., Jane Doe">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-group">
+                    <h3>Card</h3>
+                    <div class="component-showcase card">
+                        <div style="width: 100%;">
+                            <h3>Product Update</h3>
+                            <p>The new product line is now available with an updated design system.</p>
+                            <a href="#" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </div>
+</body>
+</html>
